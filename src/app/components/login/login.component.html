@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 mx-auto shadow border m-5 p-5 rounded">
+            <form [formGroup]="LoginForm" class="form">
+                <h1>Login</h1>
+                <div class="form-group">
+                    <label for="username">Enter Email</label>
+                    <!-- <input type="text" name="username" class="form-control" required> -->
+                    <input type="email" placeholder="Enter email" [formControl]="email" required class="form-control"
+                        pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$" name="email">
+                    <p *ngIf="email?.errors?.['email']"> Enter Valid Email</p>
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <!-- <input type="password" name="password"  required> -->
+                    <input type="password" placeholder="Enter password" class="form-control" required name="password"
+                        [formControl]="password">
+                    <p *ngIf="password?.errors?.['required']"> Password Requiredl</p>
+                </div>
+                <a type="submit" class="btn btn-primary btn px-4  mx-auto my-3" (click)="login()">Login</a>
+                <span class="mx-3">Or</span>
+                <a class=" m-2" routerLink="/signin">Sign In</a>
+            </form>
+        </div>
+    </div>
+</div>

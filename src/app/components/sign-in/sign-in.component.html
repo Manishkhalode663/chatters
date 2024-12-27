@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 mx-auto shadow border m-5 p-5 rounded">
+        <form class=" g-3 d-flex flex-column gap-3"  [formGroup]="SignUpForm"   >
+                <!-- <p class="form-title"></p> -->
+                <h1>Sign in to your account</h1>
+                <div class="form-group">
+                   
+
+                    <input type="text" placeholder="Enter Username" required  formControlName="name" 
+                          class="form-control" name="name"  >
+                                    <p class="error text-danger fw-medium" *ngIf="name?.errors?.['required']">Name Required</p>
+
+                </div>
+                <div class="form-group">
+                     
+                    <input type="email" placeholder="Enter email" required   class="form-control" name="email" formControlName="email" >
+                                        <p class="error text-danger fw-medium" *ngIf="email?.errors?.['required']">Email Required</p>
+                                        <p class="error text-danger fw-medium" *ngIf="email?.errors?.['email']">Enter Correct Email Address</p>
+
+                </div>
+                <div class="form-group">
+                        <input type="password" placeholder="Enter password" required name="password" minlength="6" 
+                        class="form-control"  formControlName="password" >
+                                                            <p class="error text-danger fw-medium" *ngIf="password?.errors?.['required']">Password Required</p>
+
+                </div>
+                <div class="form-group">
+                       <input type="password" placeholder="Enter Confirm password" required name="Confirmpassword" minlength="6" 
+                        class="form-control"  formControlName="confirm_password" >
+                                                            <p class="error text-danger fw-medium" *ngIf="confirm_password?.errors?.['required']">Confirm Password Required</p>
+
+                </div>
+
+                <p class="error" *ngIf="SignUpForm.errors?.['passdontmatch']">PassWord Should Match</p>
+
+                <a type="submit" class="nav-link"  class="btn btn-primary btn px-4  mx-auto my-3" routerLinkActive="active"  (click)="submit()" >
+                    Sign In
+                </a>
+                <a type=" " class="nav-link"  class="btn btn-primary btn px-4  mx-auto my-3" routerLinkActive="active"  (click)="yoyo()" >
+                    yoyo
+                </a>
+
+                <p class="signup-link">
+
+                    <!-- <a class="nav-link"   routerLink="/login" routerLinkActive="active">log in</a> -->
+                    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+    <!--   -->

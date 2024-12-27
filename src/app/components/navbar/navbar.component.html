@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+        <ul class="nav navbar-nav justify-content-center align-items-center me-auto mt-lg-0">
+            <li class="nav-item">
+                <h2>
+                    <a routerLink="/" class="navbar-brand h2">Chatters</a>
+                </h2>
+            </li>
+
+            <ul class="nav justify-content-center align-items-center  px-3">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="" routerLinkActive="active">Home</a>
+                </li>
+
+
+                <li>
+                    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/signin" routerLinkActive="active">Sign Up</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active">Chats</a>
+                </li>
+
+                <li class="nav-item  ">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active">
+
+                        My Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="">
+                        <a class="btn" (click)="authService.logOutUser()">
+
+
+                            <div class="text">Logout</div>
+
+                        </a>
+                    </a>
+                </li>
+
+
+            </ul>
+        </ul>
+    </div>
+</nav>

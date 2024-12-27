@@ -1,0 +1,301 @@
+<div class="container h-50 overflow-hidden">
+    <div class="my-page mt-5">
+        <div class="row">
+            <div class="col-lg-4 ">
+
+                <!-- sidebar  -->
+                <div class="container">
+                    <div class="sidebar border  ">
+                        <div
+                            class="top-section border-bottom d-flex flex-column justify-content-center align-items-center mt-4 gap-3">
+                            <img src="/assets/images/user.png" class="img-fluid" width="80" height="80" alt="" />
+                            <div class="username ">
+                                <h4  *ngIf="user !==null"> {{user.displayName}}</h4>
+                                <p ></p>
+                            </div>
+                        </div>
+                        <div class="bottom-section py-3 overflow-y-scroll ">
+                            <div class="container">
+                                <div class="searchbar border bg-light my-3 mb-1">
+
+                                    <div class="group">
+                                        <i class="fa fa-search icon" aria-hidden="true"></i>
+                                        <input placeholder="Search..." type="search" class="input">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="user-cards d-flex flex-column gap-3 mt-4">
+
+                                    @if( allUsers.length >0){
+                                         
+
+                                    @for(user of allUsers;track user.id){
+                                        
+                                    <div class="user-card">
+                                        <div class="card  px-3" style="max-width: 540px">
+                                            <div class="row g-0 justify-content-center align-items-center">
+                                                <div class="col-2">
+                                                    <img [src]='user.photoURL'    class="img-fluid rounded-circle" height="50"
+                                                        width="50" />
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="card-body">
+                                                        <h6 class="card-text mb-0">{{user.displayname}}</h6>
+                                                        <p class="card-text message">
+                                                            <small class="text-body-secondary">Last updated 3 mins
+                                                                ago</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+
+                                                    <p>2d</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                }
+
+
+
+
+                                    <!-- <div class="user-card">
+                                        <div class="card   px-3" style="max-width: 540px">
+                                            <div class="row g-0 justify-content-center align-items-center">
+                                                <div class="col-2">
+                                                    <img src="/assets/images/user.png" class="img-fluid rounded-circle" height="50"
+                                                        width="50" />
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="card-body">
+                                                        <h6 class="card-text mb-0">User's name</h6>
+                                                        <p class="card-text message">
+                                                            <small class="text-body-secondary">Last updated 3 mins
+                                                                ago</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+
+                                                    <p>2d</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-card">
+                                        <div class="card   px-3" style="max-width: 540px">
+                                            <div class="row g-0 justify-content-center align-items-center">
+                                                <div class="col-2">
+                                                    <img src="/assets/images/user.png" class="img-fluid rounded-circle" height="50"
+                                                        width="50" />
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="card-body">
+                                                        <h6 class="card-text mb-0">User's name</h6>
+                                                        <p class="card-text message">
+                                                            <small class="text-body-secondary">Last updated 3 mins
+                                                                ago</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+
+                                                    <p>2d</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-card">
+                                        <div class="card   px-3" style="max-width: 540px">
+                                            <div class="row g-0 justify-content-center align-items-center">
+                                                <div class="col-2">
+                                                    <img src="/assets/images/user.png" class="img-fluid rounded-circle" height="50"
+                                                        width="50" />
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="card-body">
+                                                        <h6 class="card-text mb-0">User's name</h6>
+                                                        <p class="card-text message">
+                                                            <small class="text-body-secondary">Last updated 3 mins
+                                                                ago</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+
+                                                    <p>2d</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-card">
+                                        <div class="card   px-3" style="max-width: 540px">
+                                            <div class="row g-0 justify-content-center align-items-center">
+                                                <div class="col-2">
+                                                    <img src="/assets/images/user.png" class="img-fluid rounded-circle" height="50"
+                                                        width="50" />
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="card-body">
+                                                        <h6 class="card-text mb-0">User's name</h6>
+                                                        <p class="card-text message">
+                                                            <small class="text-body-secondary">Last updated 3 mins
+                                                                ago</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+
+                                                    <p>2d</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-8">
+                <!-- chatbox  -->
+                <div class="chat-box border h-75 d-flex flex-column justify-content-between ">
+                    <div class="top">
+
+                        <div class="top-section border-bottom py-4">
+                            <div class="container">
+                                <div class="d-flex align-items-center justify-content-between px-2">
+
+                                    <div class="user-detail">
+
+                                        <div class="user-card">
+                                            <div class="card border-0 px-3" style="max-width: 540px">
+                                                <div class="row g-0 justify-content-center align-items-center">
+                                                    <div class="col-2">
+                                                        <img src="/assets/images/user.png" class="img-fluid rounded-circle" height="50"
+                                                            width="50" />
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="card-body">
+                                                            <h6 class="card-text mb-0">User's name</h6>
+                                                            <p class="card-text message">
+                                                                <small class="text-body-secondary">Last updated 3
+                                                                    mins
+                                                                    ago</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="more-detail">
+
+                                        <button class="border  rounded-circle  "><i class="fa fa-lg fa-phone "
+                                                aria-hidden="true"></i>
+                                        </button>
+                                        <button class="border  rounded-circle  "><i class="fa fa-lg fa-phone "
+                                                aria-hidden="true"></i>
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-section my-3">
+
+                            <div class="container">
+
+
+                                <div class="chat-message mb-4 my-4">
+                                    <div class="user2 mb-1 ">
+                                        <b style="color: #007bff;">Pratiksha</b>
+                                    </div>
+                                    <div class="message-section px-2 w-75" style="border-left: 3.5px solid #007bff;">
+                                        Lorem,
+                                        ipsum dolor sit amet consectetur adipisicing elit. Ipsam, non! Lorem ipsum
+                                        dolor
+                                        sit amet.
+                                    </div>
+                                </div>
+                                <div class="chat-message mb-4 my-4">
+                                    <div class="user2 mb-1 ">
+                                        <b style="color: #007bff;">Pratiksha</b>
+                                    </div>
+                                    <div class="message-section px-2 w-75" style="border-left: 3.5px solid #007bff;">
+                                        Lorem,
+                                        ipsum dolor sit amet consectetur adipisicing elit. Ipsam, non!
+                                    </div>
+                                </div>
+                                <div class="chat-message mb-4 my-4">
+                                    <div class="user2 mb-1 ">
+                                        <b style="color: #007bff;">Pratiksha</b>
+                                    </div>
+                                    <div class="message-section px-2 w-75" style="border-left: 3.5px solid #007bff;">
+                                        Lorem,
+                                        ipsum dolor sit amet consectetur adipisicing elit. Ipsam, non!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="send-message-section border-top  py-5  px-3   ">
+                        <div class="container">
+
+                            <div class="messageBox w-75">
+                                <div class="fileUploadWrapper">
+                                    <label for="file">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 337 337">
+                                            <circle stroke-width="20" stroke="#6c6c6c" fill="none" r="158.5" cy="168.5"
+                                                cx="168.5"></circle>
+                                            <path stroke-linecap="round" stroke-width="25" stroke="#6c6c6c"
+                                                d="M167.759 79V259"></path>
+                                            <path stroke-linecap="round" stroke-width="25" stroke="#6c6c6c"
+                                                d="M79 167.138H259"></path>
+                                        </svg>
+                                        <span class="tooltip">Add an image</span>
+                                    </label>
+                                    <input type="file" id="file" name="file" />
+                                </div>
+                                <input required="" placeholder="Message..." type="text" id="messageInput" />
+                                <button id="sendButton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                                        <path fill="none"
+                                            d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888">
+                                        </path>
+                                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="33.67"
+                                            stroke="#6c6c6c"
+                                            d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
